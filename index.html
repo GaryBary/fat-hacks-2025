@@ -4,8 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Fat Hacks 2025 – Gold Coast</title>
+
+    <!-- Load Tailwind (CDN, zero build step) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // optional: tweak the theme a touch
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fhc: {
+                start: '#0ea5e9',   // cyan-500
+                mid:   '#6366f1',   // indigo-500
+                end:   '#d946ef'    // fuchsia-500
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      html, body, #root { height: 100%; }
+      body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
   </head>
-  <body>
+  <body class="min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
